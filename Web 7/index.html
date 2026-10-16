@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff7448" />
+    <title>RuangKita — Portal Kampus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="RuangKita beranda">
+          <span class="brand-mark">rk<span>.</span></span>
+          <span class="brand-name">ruang<span>kita</span></span>
+        </a>
+        <div class="campus-chip">
+          <span class="campus-icon">✳</span
+          ><span>Universitas Awan<br /><small>Portal akademik</small></span
+          ><span class="chevron">⌄</span>
+        </div>
+        <p class="nav-label">MENU UTAMA</p>
+        <nav id="main-nav" aria-label="Navigasi utama"></nav>
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <span class="help-emoji">✦</span><strong>Butuh bantuan?</strong>
+            <p>Tim akademik siap bantu kamu.</p>
+            <button class="help-button" type="button">
+              Hubungi kami <span>↗</span>
+            </button>
+          </div>
+          <div class="profile" id="profile-card"></div>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <span>Portal</span><span class="crumb-slash">/</span
+            ><strong id="current-section">Beranda</strong>
+          </div>
+          <div class="topbar-actions">
+            <label class="search-box"
+              ><span>⌕</span
+              ><input
+                id="global-search"
+                type="search"
+                placeholder="Cari apa saja..."
+                aria-label="Cari"
+            /></label>
+            <button
+              class="icon-button notification-button"
+              aria-label="Notifikasi"
+              type="button"
+            >
+              ♧<i></i>
+            </button>
+            <div class="account-switch-wrap">
+              <button
+                id="role-toggle"
+                class="role-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                Ganti akun <span>⌄</span>
+              </button>
+              <div id="account-switcher" class="account-switcher" hidden></div>
+            </div>
+          </div>
+        </header>
+        <section
+          class="page-content"
+          id="page-content"
+          aria-live="polite"
+        ></section>
+        <footer class="footer">
+          <span>© 2026 RuangKita · Dibuat untuk belajar</span
+          ><span
+            >Privasi &nbsp;·&nbsp; Bantuan &nbsp;·&nbsp;
+            <b>Made with ♥</b></span
+          >
+        </footer>
+      </main>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
